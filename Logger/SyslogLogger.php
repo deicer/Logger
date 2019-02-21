@@ -9,10 +9,23 @@
 namespace Logger;
 
 
+/**
+ *
+ * Класс для записи логово в Syslog
+ *
+ * Class SyslogLogger
+ * @package Logger
+ */
 class SyslogLogger extends AbstractLogger
 {
 
 
+    /**
+     *
+     * Массив соотвествий уровней логов программы с уровнями Syslog
+     *
+     * @var array
+     */
     protected $syslog_priority = [
         LogLevel::LEVEL_NOTICE => LOG_NOTICE,
         LogLevel::LEVEL_DEBUG => LOG_DEBUG,
@@ -22,7 +35,7 @@ class SyslogLogger extends AbstractLogger
 
 
     /**
-     * Логирование сообщений
+     * Логирование сообщений в Syslog
      *
      * @param mixed $level
      * @param string $message
