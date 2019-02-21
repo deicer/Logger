@@ -8,15 +8,26 @@
 
 namespace Logger;
 
+/**
+ *
+ * Класс файлового логера
+ *
+ * Class FileLogger
+ * @package Logger
+ */
 class FileLogger extends AbstractLogger
 {
 
     /**
+     *
+     * Имя файла лога
+     *
      * @var
      */
     protected $filename;
 
     /**
+     *
      *
      * FileLogger constructor.
      * @param array $options
