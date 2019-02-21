@@ -9,6 +9,14 @@
 namespace Logger;
 
 
+/**
+ *
+ * Основной управляющий класс логера
+ *
+ *
+ * Class Logger
+ * @package Logger
+ */
 class Logger extends AbstractLogger
 {
 
@@ -31,7 +39,7 @@ class Logger extends AbstractLogger
 
     /**
      *
-     * Логирование сообщений
+     * Логирование сообщений из каждого логера сохраненного в loggers
      *
      * @param $level
      * @param $message
