@@ -13,14 +13,13 @@ class SyslogLogger extends AbstractLogger
 {
 
 
-    /**
-     * SyslogLogger constructor.
-     * @param array $options
-     */
-    public function __construct(array $options)
-    {
-        parent::__construct($options);
-    }
+    protected $syslog_priority = [
+        LogLevel::LEVEL_NOTICE => LOG_NOTICE,
+        LogLevel::LEVEL_DEBUG => LOG_DEBUG,
+        LogLevel::LEVEL_ERROR => LOG_ERR,
+        LogLevel::LEVEL_INFO => LOG_INFO
+    ];
+
 
     /**
      * Логирование сообщений
@@ -31,6 +30,10 @@ class SyslogLogger extends AbstractLogger
      */
     public function log($level, string $message): void
     {
-        // TODO: Implement log() method.
+        if (!in_array($level, $this->levels) && count($this->levels)) {
+            return;
+        }
+
+        syslog($this->syslog_priority[$level], $message);
     }
 }
