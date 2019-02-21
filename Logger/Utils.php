@@ -10,9 +10,20 @@ namespace Logger;
 
 use RuntimeException;
 
+/**
+ *
+ * Класс вспомогательных методов
+ *
+ *
+ * Class Utils
+ * @package Logger
+ */
 class Utils
 {
     /**
+     *
+     * Метод проверки на доступность фала для записи/создания
+     *
      * @param string $filename
      * @throws \RuntimeException
      */
