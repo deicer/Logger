@@ -9,6 +9,13 @@
 namespace Logger;
 
 
+/**
+ *
+ * Пустой логер
+ *
+ * Class NullLogger
+ * @package Logger
+ */
 class NullLogger extends AbstractLogger
 {
 
