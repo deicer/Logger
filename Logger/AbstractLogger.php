@@ -28,11 +28,20 @@ abstract class AbstractLogger implements LoggerInterface
 
 
     /**
+     *
+     * Логер активен или нет
+     *
      * @var boolean
      */
     protected $is_enabled;
 
     /**
+     *
+     * Если уровней логирования в levels нет, то будут записываться
+     * логи всех уровней.
+     *
+     * Если is_enabled=false логер не активен
+     *
      * AbstractLogger constructor.
      * @param array $options
      */
