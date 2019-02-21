@@ -26,6 +26,12 @@ abstract class AbstractLogger implements LoggerInterface
      */
     protected $levels = [];
 
+
+    /**
+     * @var boolean
+     */
+    protected $is_enabled;
+
     /**
      * AbstractLogger constructor.
      * @param array $options
@@ -35,6 +41,10 @@ abstract class AbstractLogger implements LoggerInterface
         if (array_key_exists('levels', $options)) {
             $this->levels = is_array($options['levels']) ? $options['levels'] : [];
         }
+
+        if (array_key_exists('is_enabled', $options)) {
+            $this->is_enabled = $options['is_enabled'];
+        } else $this->is_enabled = true;
     }
 
     /**

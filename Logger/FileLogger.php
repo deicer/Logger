@@ -50,7 +50,9 @@ class FileLogger extends AbstractLogger
             return;
         }
 
-        file_put_contents($this->filename, Utils::formatMessage($level, $message), FILE_APPEND);
+        if ($this->is_enabled) {
+            file_put_contents($this->filename, Utils::formatMessage($level, $message), FILE_APPEND);
+        }
     }
 
 
