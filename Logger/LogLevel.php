@@ -9,6 +9,14 @@
 namespace Logger;
 
 
+/**
+ *
+ * Константы с уровнями логирования
+ *
+ *
+ * Class LogLevel
+ * @package Logger
+ */
 class LogLevel
 {
 
