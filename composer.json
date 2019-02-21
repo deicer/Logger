@@ -1,0 +1,15 @@
+{
+  "name": "deicer/logger",
+  "description": "logger for anketolog",
+  "authors": [
+    {
+      "name": "Gennady Lebedev",
+      "email": "gena-lebedev@yandex.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Logger\\": "Logger/"
+    }
+  }
+}
